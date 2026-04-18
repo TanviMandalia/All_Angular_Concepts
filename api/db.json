@@ -1,0 +1,29 @@
+
+{
+    "users":[{
+        "name":"Tanvi",
+        "age":20,
+        "email":"T@test.com"
+    },
+    {
+        "name":"Krishna",
+        "age":20,
+        "email":"K@test.com"
+    },
+    {
+        "name":"Yash",
+        "age":20,
+        "email":"Y@test.com"
+    },
+    {
+        "name":"Heet",
+        "age":20,
+        "email":"H@test.com"
+    },
+    {
+        "name":"Ishu",
+        "age":20,
+        "email":"I@test.com"
+    }
+]
+}

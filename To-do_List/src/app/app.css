@@ -1,0 +1,17 @@
+.task_list{    
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border: 1px double darkblue;
+    background-color: rgb(228, 222, 172);
+    box-shadow: 2px 2px 2px black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:10px;
+    padding: 5px;
+}
+
+button{
+    border-radius: 15px;
+    color: red;
+    background-color: rgb(192, 188, 188);
+}

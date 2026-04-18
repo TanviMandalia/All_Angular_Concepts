@@ -1,0 +1,51 @@
+<h2>Registration Form</h2>
+
+<form *ngIf="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name" />
+  <div *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
+    Name is required
+  </div>
+
+  <br><br>
+
+  <label>Email:</label>
+  <input type="email" formControlName="email" />
+  <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+    Valid email required
+  </div>
+
+  <br><br>
+
+  <label>Password:</label>
+  <input type="password" formControlName="password" />
+  <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].invalid">
+    Min 6 characters
+  </div>
+
+  <br><br>
+
+  <div formArrayName="phones">
+    <label>Phone Numbers:</label>
+
+    <div *ngFor="let phone of phones.controls; let i = index">
+      <input [formControlName]="i" placeholder="Phone number" />
+
+      <button type="button" (click)="removePhone(i)">
+        Remove
+      </button>
+    </div>
+  </div>
+
+  <br>
+
+  <button type="button" (click)="addPhone()">Add Phone</button>
+
+  <br><br>
+
+  <button type="submit" [disabled]="registerForm.invalid">
+    Register
+  </button>
+
+</form>

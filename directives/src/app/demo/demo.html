@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<hr>
+<p [ngClass]="{ active: isActive }">This is ngClass</p>
+<hr>
+<p appHighlight>
+    This is Custom Directive.
+</p>

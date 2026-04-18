@@ -1,0 +1,10 @@
+<p>Template Form</p>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="user.name" required>
+    <br><br>
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="user.email" required>
+    <br><br>
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
