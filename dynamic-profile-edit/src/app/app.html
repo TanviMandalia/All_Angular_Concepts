@@ -1,0 +1,10 @@
+<div class="Profile">
+  @if(imageUrl) {
+  <img *ngIf="imageUrl" [src]="imageUrl" (click)="triggerFileInput()" style="cursor: pointer;">
+}
+<br><br>
+<button (click)="triggerFileInput()">Upload Profile</button>
+
+<input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" hidden>
+
+</div>
