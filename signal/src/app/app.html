@@ -1,3 +1,28 @@
 <h3>Angular Signals</h3>
 
 <app-counter></app-counter>
+
+<app-search></app-search>
+
+<h3>Angular Effect</h3>
+
+<input placeholder="....Type Something...." (input)="update($event)">
+
+<p>Value: {{ name() }} </p>
+
+<h2>Signal Form Example</h2>
+
+<input placeholder="Email" (input)="updateEmail($event)"><br><br>
+
+<input type="password" placeholder="Password" (input)="updatePassword($event)">
+
+<p>Email: {{ form().email }}</p>
+<p>Password: {{ form().password }}</p>
+
+<!-- @if (!isValid()) {
+  <p style="color:red">Form is invalid</p>
+} -->
+
+<button [disabled]="!isValid()">
+    Submit
+</button>

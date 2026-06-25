@@ -29,7 +29,7 @@ export class ReactiveFormComponent implements OnInit {
       phones: this.fb.array([]) // FormArray
     });
   }
-
+  
   get phones(): FormArray {
     return this.registerForm.get('phones') as FormArray;
   }
